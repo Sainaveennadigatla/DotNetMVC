@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\Pizzas\Bolognese.png" />
+    <None Include="wwwroot\images\Pizzas\Carbonara.png" />
+    <None Include="wwwroot\images\Pizzas\Create.png" />
+    <None Include="wwwroot\images\Pizzas\Create.zip" />
+    <None Include="wwwroot\images\Pizzas\Hawaiian.png" />
+    <None Include="wwwroot\images\Pizzas\Margerita.png" />
+    <None Include="wwwroot\images\Pizzas\MeatFeast.png" />
+    <None Include="wwwroot\images\Pizzas\Mushroom.png" />
+    <None Include="wwwroot\images\Pizzas\Pepperoni.png" />
+    <None Include="wwwroot\images\Pizzas\Seafood.png" />
+    <None Include="wwwroot\images\Pizzas\Vegetarian.png" />
+    <None Include="wwwroot\images\PizzaTime.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,31 @@
+﻿@model Ceaser
+<h1>Created</h1>
+
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+    <div class="card-header">
+        <h1>Your Dog</h1>
+    </div>
+    <div class="card-body">
+    <form asp-controller="HomeNew" asp-action="CreateDog" method="post">
+
+        <div class="mb-3">
+            <lable class="form-label">DogName</lable>
+            <input asp-for=Name type="text" class="form-control"/>
+        </div>
+         <div class="mb-3">
+            <lable class="form-label">Age</lable>
+            <input asp-for=Age type="text" class="form-control"/>
+        </div>
+         <div class="mb-3">
+            <button type="submit"class="btn btn-primary">Save</button>
+        </div>
+        </form>
+    </div>
+    <div class="card-footer">
+        <h1>Thank you</h1>
+    </div>
+        </div>
+    </div>
+</div>

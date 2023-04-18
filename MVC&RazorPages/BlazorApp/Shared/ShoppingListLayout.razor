@@ -1,0 +1,14 @@
+﻿@inherits LayoutComponentBase
+
+<header>
+    List
+</header>
+<nav>
+    <a href="/">Home</a>
+</nav>
+<div>
+    <a>@today.ToString("dddd, dd MMMM yyyy")</a>
+</div>
+@code {
+    DateTime today = DateTime.Today;
+}

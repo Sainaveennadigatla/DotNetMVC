@@ -1,0 +1,42 @@
+﻿@page "/shoppinglist"
+@layout ShoppingList
+@using BlazorApp.Data
+
+<h3>ShoppingList</h3>
+<EditForm Model="@grocery" OnSubmit="AddGrocery">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+    <p>
+        <lable>
+            Name:
+            <InputText @bind-Value="grocery.Name"/>
+        </lable>
+    </p>
+    <p>
+        <lable>
+            Name:
+            <InputNumber @bind-Value="grocery.Price" />
+        </lable>
+    </p>
+</EditForm>
+<button type="submit">Add Grocery</button>
+<ul>
+    @foreach(var grocery in groceries)
+    {
+        <li>@grocery.Name -- @grocery.Price</li>
+    }
+    
+</ul>
+<h1>Total(@groceries.Sum(grocery=> grocery.Price))</h1>
+@code {
+    private Grocery grocery=new();
+    private string? groceryName;
+    private float groceryPrice;
+
+    private List<Grocery> groceries = new();
+    private void AddGrocery()
+    {
+            groceries.Add(grocery);
+            grocery = new();
+    }
+}
